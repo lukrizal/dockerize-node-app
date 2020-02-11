@@ -1,0 +1,16 @@
+.git
+.vscode
+coverage
+dbdata
+dist
+docker
+envs
+node_modules
+scripts
+test
+npm-debug.log
+debug.log
+.dockerignore
+.gitignore
+.gitkeep
+README.md

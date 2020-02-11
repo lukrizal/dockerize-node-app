@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export NODE_ENV=local
+source ./scripts/load-env.sh
+docker-compose -f docker/docker-compose.yml $@;

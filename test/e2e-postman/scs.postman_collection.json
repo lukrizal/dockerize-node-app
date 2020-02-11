@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "d7f65fb7-e860-4a3b-ac08-76e9fb78316b",
+		"name": "Side Chatter Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0734f567-e8ff-41d2-a8f0-37f7fe8a78f7",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{HOST}}:{{PORT}}/",
+					"protocol": "http",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Comment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5f4215f-c5f2-46af-9de6-fccb44758d38",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comment\": \"A very long comment\"\n}"
+				},
+				"url": {
+					"raw": "http://{{HOST}}:{{PORT}}/api/orgs/{{ORG}}/comments",
+					"protocol": "http",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"orgs",
+						"{{ORG}}",
+						"comments"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Comment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"comment\": \"A very long comment\"\n}"
+						},
+						"url": {
+							"raw": "http://{{HOST}}:{{PORT}}/api/orgs/{{ORG}}/comments",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"orgs",
+								"{{ORG}}",
+								"comments"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "List Comments",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1c625e7c-fcef-4616-8e5d-304793f680ac",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{HOST}}:{{PORT}}/api/orgs/{{ORG}}/comments",
+					"protocol": "http",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"orgs",
+						"{{ORG}}",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soft Delete Comment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "56d37c39-b0c9-40a7-b2ae-f3e3a6792ca1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{HOST}}:{{PORT}}/api/orgs/{{ORG}}/comments",
+					"protocol": "http",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"orgs",
+						"{{ORG}}",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Members",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d1935c64-33fb-4c00-bb3f-8b40f6a7efc3",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{HOST}}:{{PORT}}/api/orgs/{{ORG}}/members",
+					"protocol": "http",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"orgs",
+						"{{ORG}}",
+						"members"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
