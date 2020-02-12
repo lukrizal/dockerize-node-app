@@ -1,7 +1,9 @@
 {
   "name": "side-chatter-service",
   "version": "1.0.0",
-  "description": "",
+  "description": "MongoDB + Docker + Nodejs",
+  "private": true,
+  "author": "Joseph Lacern <joseph.lacerna@gmail.com>",
   "main": "index.js",
   "scripts": {
     "build": "tsc && npm run lint",
@@ -23,7 +25,6 @@
     "devstop": "NODE_ENV=local ./scripts/dc down"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "@octokit/rest": "^16.43.1",

@@ -168,6 +168,7 @@ Running e2e using collection runner in postman
 * Use local development workflow to execute test
 * Non-dockerized approach workflow
 * Authorization using JWT
+* Clean `./scripts/*.sh` files
 
 
 ### Attention
